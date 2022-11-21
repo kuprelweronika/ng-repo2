@@ -9,9 +9,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { RoleServiceModule } from '../../services/role.service-module';
 import { RegisterFormComponent } from './register-form.component';
+import {MatRadioModule} from "@angular/material/radio";
 
 @NgModule({
-  imports: [ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatInputModule, CommonModule, MatButtonModule, RoleServiceModule, MatSelectModule, MatOptionModule],
+    imports: [ReactiveFormsModule, MatCardModule, MatFormFieldModule, MatInputModule, CommonModule, MatButtonModule, RoleServiceModule, MatSelectModule, MatOptionModule, MatRadioModule],
   declarations: [RegisterFormComponent],
   providers: [],
   exports: [RegisterFormComponent]
