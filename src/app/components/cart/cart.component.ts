@@ -24,7 +24,6 @@ export class CartComponent {
   private routeUser: any;
 
   constructor(private _productService: ProductService, private datePipe: DatePipe, private _cartService: CartService, private route: ActivatedRoute, private router: Router) {
-    //this.test = this.datePipe.transform(this.myDate, 'yyyy-MM-dd')
     this.routeUser = this.route.snapshot.url[0].path;
   }
 

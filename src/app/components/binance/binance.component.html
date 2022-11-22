@@ -1,0 +1,30 @@
+<mat-card><mat-card-title>Selected Crypto</mat-card-title>
+    <mat-card-content>
+<mat-chip-list aria-label="Fish selection">
+  <mat-chip *ngFor="let item of selectedData$ | async">
+ {{item}}
+</mat-chip>
+</mat-chip-list>
+
+    </mat-card-content></mat-card>
+
+
+
+<mat-card><mat-card-title>Select Crypto</mat-card-title>
+    <mat-card-content>
+<form [formGroup]="selectedForm" (ngSubmit)="onSelectedFormSubmitted(selectedForm)">
+    <div>
+        <mat-form-field>
+        <mat-label>Search for crypto</mat-label>
+        <mat-select multiple formControlName="selected">
+            <mat-option *ngFor="let item of list$ | async" [value]="item.symbol">
+                {{item.symbol}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    </div>
+    <div><button type="submit" mat-raised-button color="primary">Submit</button></div></form>
+
+
+
+    </mat-card-content></mat-card>
